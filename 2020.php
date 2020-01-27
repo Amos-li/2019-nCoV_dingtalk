@@ -86,7 +86,7 @@ $area = explode("}catch(e)", explode("window.getAreaStat = ", $html)[1])[0];
 $area = json_decode($area, true);
 foreach ($area as $shengfen) {
     if (in_array($shengfen['provinceName'], $jiankong) || $jiankong[$shengfen['provinceName']] != null) {
-        $tmpmessage .= $shengfen['provinceName'] . " 确诊 " . $shengfen['confirmedCount'] . " 治愈 " . $shengfen['curedCount'] . " 死亡 " . $shengfen['deadCount'] . "  \n"; //拿到省级数据
+        $tmpmessage .="    \n".$shengfen['provinceName'] . " 确诊 " . $shengfen['confirmedCount'] . " 治愈 " . $shengfen['curedCount'] . " 死亡 " . $shengfen['deadCount'] . "  \n"; //拿到省级数据
         if (is_array($jiankong[$shengfen['provinceName']])) {
             foreach ($shengfen['cities'] as $chengshi) {
                 if (in_array($chengshi['cityName'],$jiankong[$shengfen['provinceName']])) {
