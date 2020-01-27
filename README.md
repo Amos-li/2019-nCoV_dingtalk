@@ -1,4 +1,4 @@
-![](./img/3.png)
+![](https://cdn.jsdelivr.net/gh/yumusb/2019-nCoV_dingtalk@master/img/3.png)
 
 运行思路:
 
@@ -8,7 +8,7 @@
 
 1. 去钉钉的群组里面添加一个WebHook机器人(PC客户端或者网页版 <https://im.dingtalk.com/>)
 
-   ![](./img/1.png)
+   ![](https://cdn.jsdelivr.net/gh/yumusb/2019-nCoV_dingtalk@master/img/1.png)
 
    **安全设置选择自定义关键字**
 
@@ -31,7 +31,7 @@ $keyword="你设置的触发关键字";
 
    你可以使用计划任务来执行，这里我使用的是 <https://uptimerobot.com/> 里面的监控，每五分钟访问一次。
 
-   ![](./img/2.png)
+   ![](https://cdn.jsdelivr.net/gh/yumusb/2019-nCoV_dingtalk@master/img/2.png)
 
 使用到的数据来源:
 
