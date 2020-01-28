@@ -96,8 +96,8 @@ foreach ($area as $shengfen) {
         }
     }
 }
-
-$message = date("Y-m-d H:i:s", substr($StatisticsService['modifyTime'], 0, 10)) . " 更新  现在时间" . date("Y-m-d H:i:s") . "\n ![]({$largeimg})  \n" . $StatisticsService['countRemark'] . "  \n {$tmpmessage}    \n五分钟自动检测更新情况 手动检测请点击[此处]({$pageurl})   \n丁香园[原文](https://3g.dxy.cn/newh5/view/pneumonia)   \nby:{$keyword}";
+$message = date("Y-m-d H:i:s", substr($StatisticsService['modifyTime'], 0, 10)) . " 更新  现在时间" . date("Y-m-d H:i:s") . "\n ![]({$largeimg})  \n确诊 {$StatisticsService['confirmedCount']}  疑似 {$StatisticsService['suspectedCount']} 治愈 {$StatisticsService['curedCount']} 死亡 {$StatisticsService['deadCount']}  \n {$tmpmessage} \n五分钟自动检测更新情况 手动检测请点击[此处]({$pageurl})   \n丁香园[原文](https://3g.dxy.cn/newh5/view/pneumonia)   \nby:{$keyword}";
+//$message = date("Y-m-d H:i:s", substr($StatisticsService['modifyTime'], 0, 10)) . " 更新  现在时间" . date("Y-m-d H:i:s") . "\n ![]({$largeimg})  \n" . $StatisticsService['countRemark'] . "  \n {$tmpmessage}    \n五分钟自动检测更新情况 手动检测请点击[此处]({$pageurl})   \n丁香园[原文](https://3g.dxy.cn/newh5/view/pneumonia)   \nby:{$keyword}";
 //echo $message;
 
 $data = array('msgtype' => 'markdown', 'markdown' => array('title' => '疫情播报', 'text' => $message));
